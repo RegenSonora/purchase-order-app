@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Purchase Order</title>
+    <meta name="description" content="Fill out a purchase order and send it as a PDF." />
+    <meta name="theme-color" content="#f2f3f4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16181a" media="(prefers-color-scheme: dark)" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Purchase Order" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon-192.png" />
+    <link rel="apple-touch-icon" href="./icon-180.png" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>Purchase Order</h1>
+      <nav aria-label="Screens">
+        <button type="button" id="nav-history" class="quiet">History</button>
+        <button type="button" id="nav-settings" class="quiet">Settings</button>
+      </nav>
+    </header>
+    <main id="view"></main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
