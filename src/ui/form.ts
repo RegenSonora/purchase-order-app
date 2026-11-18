@@ -307,11 +307,13 @@ export function renderForm(root: HTMLElement, options: FormOptions): FormHandle 
         () => (po.autoNumber = false),
         'Made from the date, the time and the requester’s initials. You can change it.',
       ),
-      h(
-        'div',
-        { class: 'row' },
-        text('poDate', 'PO date', date()),
-        text('purchaseRequest', 'Purchase request #'),
+      text('poDate', 'PO date', date()),
+      text(
+        'purchaseRequest',
+        'Purchase request #',
+        {},
+        undefined,
+        'When applicable. Leave blank if no Purchase Request was done for this purchase.',
       ),
     ),
     card(

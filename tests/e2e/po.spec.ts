@@ -182,6 +182,7 @@ test('a typed-in budget line and funding source print on the PDF and are offered
     .selectOption({ label: 'Other (type it in)' });
   await page.getByLabel('Type the funding source').fill('ADHS Heart Nation');
   await send(page);
+  await expect.poll(async () => (await shared(page)).length).toBe(1);
 
   const text = await sharedText((await shared(page))[0]);
   expect(text).toContain('Budget line Community garden beds');
@@ -242,7 +243,7 @@ test('a PO number typed by hand is kept as typed', async ({ page }) => {
   await fillPo(page);
   await expect(page.getByLabel('PO number', { exact: true })).toHaveValue('PO-77');
   await send(page);
-  expect((await shared(page))[0]?.name).toBe('PO-77-Ace-Hardware.pdf');
+  await expect.poll(async () => (await shared(page))[0]?.name).toBe('PO-77-Ace-Hardware.pdf');
   await expect(page.getByLabel('PO number', { exact: true })).toHaveValue(NUM);
 });
 

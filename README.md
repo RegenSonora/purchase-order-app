@@ -25,8 +25,11 @@ repeat across phones or after a phone's browser data is cleared. If the same per
 second PO in the same minute, it gets `-2` on the end. The number can be changed by hand; after
 that it is left as typed.
 
-Numbers are not in sequence, so a missing PO cannot be spotted from a gap. The Contract Register
-in the Grant Compliance Master workbook is the complete list of POs.
+Numbers are not in sequence, so a missing PO cannot be spotted from a gap. Keep a list of POs
+somewhere else if you need to check that none is missing: the History screen only covers one
+phone.
+
+**Purchase request #** is for when a Purchase Request was done first. Leave it blank otherwise.
 
 The signature boxes on the PDF are blank. Signing with a finger is planned for phase 2.
 
